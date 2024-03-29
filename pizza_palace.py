@@ -5,13 +5,14 @@
     purpose: point of sale program
 """
 
-#-------------------------------VARIABLES-------------------------------#
+#-------------------------------IMPORTS-------------------------------#
 # import utils.py
 import utils
 
-#TODO: global CONSTANT lists
+#---------------------------GLOBAL CONSTANTS-------------------------------#
+#--------------------------------LISTS-------------------------------#
 
-#5 pizza types (string) list
+# pizza types list (string)
 PIZZA_TYPE = [
     "1. Supreme",
     "2. Cheese",
@@ -29,17 +30,18 @@ PIZZA_SIZE = [
     "4. Extra Large $20"
 ] 
 
-
 # PIZZA_PRICE # (int)
 PIZZA_PRICE = [
     5,
     10,
-    15
+    15,
+    20
 ]
 
 #-------------------------------MAIN-------------------------------#
 #TODO: use a main function
 def main():
+    
     #TODO: from utils.py use title()
     print(utils.title("Welcome to Pete's Pizza Palace!"))
     print("Welcome to our online text based ordering system!")
@@ -55,9 +57,11 @@ def main():
     
     #testing pizza size
     #print(f"You chose: {PIZZA_SIZE[type]}")
+    
+    # display purchase info
+    display_purchase(type, size)
 
-#-------------------------------FUNCTIONS-------------------------------#
-
+#-------------------------------PIZZA TYPE-------------------------------#
 def get_pizza_type():
     
     #use a for loop to display the info in the pizza type list
@@ -73,6 +77,7 @@ def get_pizza_type():
     #return the index of the pizza type choice
     return type
 
+#-------------------------------PIZZA SIZE-------------------------------#
 def get_pizza_size():
         
     #use a for loop to display the information in the pizza size list
@@ -88,12 +93,20 @@ def get_pizza_size():
     #return the index of the pizza size choice
     return size
 
+#-----------------------------DISPLAY PURCHASE-----------------------------#
+def display_purchase(type, size):
+    
+    #lookup the cost of the pizza in the price list
+    print(f"You ordered a number {PIZZA_TYPE[type]} pizza.")
+    print(f"Size number {PIZZA_SIZE[size]}")
+    
+    #calculate the cost of the pizza
+    cost = PIZZA_PRICE[size]
+    
+    #display the completed order
+    print(f"Your pizza costs: ${cost}")
 
-#TODO:display_purchase()
-#pass in the pizza type and pizza size
-#lookup the cost of the pizza in the price list
-#calculate the cost of the pizza
-#display the completed order
-
-if __name__ == "__main__":
+#-----------------------------CALL MAIN-----------------------------#
+# call the main function
+if __name__ == '__main__':
     main()
