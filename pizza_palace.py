@@ -6,13 +6,13 @@
 """
 
 #-------------------------------IMPORTS-------------------------------#
-# import utils.py
+#import utils.py
 import utils
 
 #---------------------------GLOBAL CONSTANTS-------------------------------#
 #--------------------------------LISTS-------------------------------#
 
-# pizza types list (string)
+#pizza types list (string)
 PIZZA_TYPE = [
     "1. Supreme",
     "2. Cheese",
@@ -21,8 +21,8 @@ PIZZA_TYPE = [
     "5. Meat Lovers"
 ]
 
-# size(string) and price(int) are parallel lists
-# pizza sizes
+#size(string) and price(int) are parallel lists
+#pizza sizes
 PIZZA_SIZE = [
     "1. Small $5",
     "2. Medium $10",
@@ -30,7 +30,7 @@ PIZZA_SIZE = [
     "4. Extra Large $20"
 ] 
 
-# PIZZA_PRICE # (int)
+#PIZZA_PRICE # (int)
 PIZZA_PRICE = [
     5,
     10,
@@ -39,7 +39,6 @@ PIZZA_PRICE = [
 ]
 
 #-------------------------------MAIN-------------------------------#
-#TODO: use a main function
 def main():
     
     #TODO: from utils.py use title()
@@ -58,7 +57,7 @@ def main():
     #testing pizza size
     #print(f"You chose: {PIZZA_SIZE[type]}")
     
-    # display purchase info
+    #display purchase info
     display_purchase(type, size)
 
 #-------------------------------PIZZA TYPE-------------------------------#
@@ -71,7 +70,7 @@ def get_pizza_type():
     #use utils.get_int() to get input from the user    
     type = utils.get_int("What pizza do you want to order?: ")
     
-    # TODO: subtract 1 from user input
+    #subtract 1 from user input
     type = type - 1
     
     #return the index of the pizza type choice
@@ -83,11 +82,11 @@ def get_pizza_size():
     #use a for loop to display the information in the pizza size list
     for size in PIZZA_SIZE:
         print(size)
-    
-    # TODO: use utils.get_int() to get input from user
+
+    #use utils.get_int() to get input from user
     size = utils.get_int("What size of pizza do you want to order?: ")
     
-    # TODO: subtract 1 from user input
+    #subtract 1 from user input
     size = size - 1
     
     #return the index of the pizza size choice
